@@ -15,3 +15,7 @@ db.Products.fing({}).pretty()
 docker-compose -f .\docker-compose.yml -f.\docker-compose.override.yml up -d
 
 docker-compose -f .\docker-compose.yml -f.\docker-compose.override.yml down
+
+docker run -d -p 6379:6379 --name aspnetrun-redis redis
+
+docker exec -it aspnetrun-redis /bin/bash
